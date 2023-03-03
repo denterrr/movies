@@ -8,6 +8,7 @@ import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.launch
 import ter.den.core.domain.model.CustomThrowable
 import ter.den.core.domain.model.SingleLiveEvent
+import ter.den.core.presentation.emptyErrorHandler
 import ter.den.feature_movie_details.domain.model.Movie
 import ter.den.feature_movie_details.domain.usecases.GetMovieDetailsUseCase
 import ter.den.feature_movie_details.domain.usecases.OnFavoriteStatusChangeUseCase
@@ -40,7 +41,7 @@ class DetailsViewModel @Inject constructor(
         _movie.value = movie
     }
 
-    fun onFavoriteClick(id: Int) = viewModelScope.launch {
+    fun onFavoriteClick(id: Int) = viewModelScope.launch(emptyErrorHandler) {
         onFavoriteStatusChangeUseCase(id.toString())
     }
 }

@@ -8,6 +8,7 @@ import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
+import ter.den.core.presentation.emptyErrorHandler
 import ter.den.feature_home.domain.model.Popular
 import ter.den.feature_home.domain.usecases.GetPopularContentUseCase
 import ter.den.feature_home.domain.usecases.GetPopularFromDbUseCase
@@ -42,7 +43,7 @@ class HomeViewModel @Inject constructor(
         }
     }
 
-    fun onClickFavorite(id: Int) = viewModelScope.launch {
+    fun onClickFavorite(id: Int) = viewModelScope.launch(emptyErrorHandler) {
         onFavoriteStatusChangeUseCase(id.toString())
     }
 

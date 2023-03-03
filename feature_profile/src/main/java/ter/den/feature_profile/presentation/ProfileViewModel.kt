@@ -10,6 +10,7 @@ import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import ter.den.core.domain.model.CustomThrowable
 import ter.den.core.domain.model.SingleLiveEvent
+import ter.den.core.presentation.emptyErrorHandler
 import ter.den.feature_profile.domain.model.AccountDetails
 import ter.den.feature_profile.domain.model.Movie
 import ter.den.feature_profile.domain.usecases.*
@@ -40,7 +41,7 @@ class ProfileViewModel @Inject constructor(
         setUpProfile()
     }
 
-    private fun setUpProfile() = viewModelScope.launch {
+    private fun setUpProfile() = viewModelScope.launch(emptyErrorHandler) {
         val sessionId = getSessionIdFlowUseCase().stateIn(viewModelScope).value
         if (sessionId.isNullOrEmpty()) _accountDetails.value = null
         else {
@@ -67,7 +68,7 @@ class ProfileViewModel @Inject constructor(
         }
     }
 
-    fun onFavoriteClick(id: Int) = viewModelScope.launch {
+    fun onFavoriteClick(id: Int) = viewModelScope.launch(emptyErrorHandler) {
         onFavoriteStatusChangeUseCase(id.toString())
     }
 

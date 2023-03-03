@@ -6,6 +6,7 @@ import androidx.paging.*
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
+import ter.den.core.presentation.emptyErrorHandler
 import ter.den.feature_search.domain.model.Movie
 import ter.den.feature_search.domain.usecases.OnFavoriteStatusChangeUseCase
 import ter.den.feature_search.domain.usecases.SearchUseCase
@@ -38,7 +39,7 @@ class SearchViewModel @Inject constructor(
         _query.tryEmit(query)
     }
 
-    fun onClickFavorite(id: Int) = viewModelScope.launch {
+    fun onClickFavorite(id: Int) = viewModelScope.launch(emptyErrorHandler) {
         onFavoriteStatusChangeUseCase(id.toString())
     }
 }
