@@ -1,0 +1,37 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Movie" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/blue</item>
+        <item name="colorSecondaryVariant">@color/blue</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/grey</item>
+        <item name="android:navigationBarColor">@color/grey</item>
+
+        <!-- Customize your theme here. -->
+
+        <item name="appPrimaryColor">@color/white</item>
+        <item name="appSecondaryColor">@color/darkPrimary</item>
+        <item name="appBackgroundColor">@color/grey</item>
+        <item name="appSecondaryBackgroundColor">@color/white</item>
+
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
+
+
+        <!--        REMOVING UNDERLINE IN TEXT INPUT EDIT TEXT-->
+        <item name="android:candidatesTextStyleSpans">candidates</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_layer</item>
+        <item name="appPrimaryColor">@color/grey</item>
+    </style>
+</resources>

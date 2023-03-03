@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_result">No result</string>
+    <string name="title_of_movie_or_tv_series">Title of movie</string>
+</resources>

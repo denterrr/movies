@@ -12,5 +12,12 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Movies"
+rootProject.name = "Movie"
 include ':app'
+include ':feauture_home'
+include ':core'
+include ':feature_search'
+include ':feature_movie_details'
+include ':feature_profile'
+include ':config'
+include ':feature_auth'

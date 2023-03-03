@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--    TEXT START-->
+
+    <style name="Text">
+        <item name="fontFamily">@font/manrope_medium</item>
+        <item name="android:textColor">?attr/appSecondaryColor</item>
+    </style>
+
+    <style name="Text.Caption">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/manrope_regular</item>
+    </style>
+
+    <style name="Text.Title1">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.Title2">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="Text.Title2.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.Title3">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Text.Body">
+        <item name="android:fontFamily">@font/manrope_regular</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <!--    TEXT END-->
+
+    <!--    BOTTOM NAVIGATION START-->
+
+    <style name="Divider">
+        <item name="android:layout_height">1dp</item>
+        <item name="android:alpha">0.4</item>
+        <item name="android:background">?attr/appSecondaryColor</item>
+    </style>
+
+
+    <style name="Widget.App.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.BottomNavigationView</item>
+        <item name="itemRippleColor">@null</item>
+    </style>
+
+    <style name="ThemeOverlay.App.BottomNavigationView" parent="">
+        <item name="colorPrimary">?attr/appBackgroundColor</item>
+        <item name="colorOnPrimary">@color/blue</item>
+    </style>
+
+    <!--    BOTTOM NAVIGATION END-->
+
+    <!--    APP BAR START-->
+
+    <style name="Widget.App.CollapsingToolbar" parent="Widget.Material3.CollapsingToolbar">
+
+        <item name="expandedTitleTextAppearance">@style/Text.Title2</item>
+        <item name="collapsedTitleTextAppearance">@style/Text.Title2</item>
+        <item name="layout_scrollFlags">scroll|enterAlways|enterAlwaysCollapsed|snap</item>
+        <item name="collapsedTitleGravity">center|top</item>
+        <item name="expandedTitleGravity">center|top</item>
+        <item name="contentScrim">?attr/appBackgroundColor</item>
+    </style>
+
+
+    <!--    APP BAR END-->
+
+
+    <!--    MATERIAL ALERT DIALOG START-->
+
+    <style name="ThemeOverlay.App.MaterialAlertDialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorPrimary">?attr/appBackgroundColor</item>
+        <item name="colorSecondary">?attr/appBackgroundColor</item>
+        <item name="colorSurface">?attr/appBackgroundColor</item>
+        <item name="colorOnSurface">?attr/appBackgroundColor</item>
+        <item name="alertDialogStyle">@style/MaterialAlertDialog.App</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/MaterialAlertDialog.App.Title.Text
+        </item>
+        <item name="materialAlertDialogBodyTextStyle">@style/MaterialAlertDialog.App.Body.Text
+        </item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.App.Button</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.App.Button</item>
+    </style>
+
+    <style name="Widget.App.Button" parent="Widget.Material3.Button.TextButton.Dialog">
+        <item name="fontFamily">@font/manrope_medium</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?attr/appSecondaryColor</item>
+    </style>
+
+    <style name="MaterialAlertDialog.App" parent="MaterialAlertDialog.Material3">
+        <item name="shapeAppearanceOverlay">@null</item>
+    </style>
+
+    <style name="MaterialAlertDialog.App.Title.Text" parent="MaterialAlertDialog.Material3.Title.Text">
+        <item name="fontFamily">@font/manrope_medium</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">?attr/appSecondaryColor</item>
+    </style>
+
+    <style name="MaterialAlertDialog.App.Body.Text" parent="MaterialAlertDialog.Material3.Body.Text">
+        <item name="fontFamily">@font/manrope_medium</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?attr/appSecondaryColor</item>
+    </style>
+
+
+    <!--    MATERIAL ALERT DIALOG END-->
+
+    <!--    BUTTONS START-->
+
+    <style name="Button">
+        <item name="textAllCaps">false</item>
+        <item name="android:paddingVertical">17dp</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:textAppearance">@style/Text.Title3</item>
+    </style>
+
+    <style name="Button.BorderlessButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="strokeColor">@color/blue</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textAppearance">@style/Text.Title3</item>
+        <item name="android:paddingVertical">10dp</item>
+        <item name="android:paddingHorizontal">15dp</item>
+        <item name="cornerRadius">10dp</item>
+
+    </style>
+
+    <!--    BUTTONS END-->
+
+    <!--    EDIT TEXT START-->
+
+    <style name="InputLayoutInAppBar" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxCornerRadiusBottomEnd">10dp</item>
+        <item name="boxCornerRadiusBottomStart">10dp</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+        <item name="boxCornerRadiusTopStart">10dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="hintEnabled">false</item>
+        <item name="boxStrokeColor">@android:color/transparent</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+
+    </style>
+
+    <style name="InputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+
+        <item name="boxCornerRadiusBottomEnd">10dp</item>
+        <item name="boxCornerRadiusBottomStart">10dp</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+        <item name="boxCornerRadiusTopStart">10dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="hintEnabled">true</item>
+        <item name="expandedHintEnabled">false</item>
+        <item name="boxStrokeColor">?attr/appSecondaryColor</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0.5dp</item>
+
+    </style>
+
+    <!--    EDIT TEXT END-->
+
+    <style name="ActionImage" parent="Widget.AppCompat.ActionButton">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+
+</resources>

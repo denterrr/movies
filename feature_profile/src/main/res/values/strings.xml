@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="profile">Profile</string>
+    <string name="favorites">Favorites</string>
+    <string name="watch_list">Watch list</string>
+    <string name="login">Login</string>
+    <string name="password">password</string>
+    <string name="enter_password">Enter password</string>
+    <string name="enter_usename">Enter usename</string>
+    <string name="username">username</string>
+    <string name="username_format">\@%s</string>
+    <string name="no_name">No name</string>
+    <string name="sign_up"><a href="https://www.themoviedb.org/signup">Sign up</a></string>
+    <string name="no_result">No result</string>
+</resources>
